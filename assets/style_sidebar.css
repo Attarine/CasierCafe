@@ -213,6 +213,14 @@
      opacity: 0;
  }
  
+ body.dark .menu-bar .mode i.sun {
+     opacity: 1;
+ }
+ 
+ body.dark .menu-bar .mode i.moon {
+     opacity: 0;
+ }
+ 
  .menu-bar .mode .toggle-switch {
      position: absolute;
      right: 0;

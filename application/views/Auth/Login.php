@@ -1,40 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<body class="bg-gradient-primary">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/style.css">
-    <title>Document</title>
-</head>
+    <div class="container">
 
-<body>
-    <div id="card">
-        <div id="card-content">
-            <div id="card-title">
-                <h2>LOGIN</h2>
-                <div class="underline-title">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
 
+            <div class="col-lg-7">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Login System</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user" name="username" placeholder="Masukkan Username anda">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user" name="password" placeholder="Masukkan Password anda">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </button>
+
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="<?= base_url('auth/add-acount-user'); ?>">Buat Akun !</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <form method="post" class="form" action="">
-                <label for="user-email" style="padding-top: 13px;">&nbsp;Email</label>
-                <input type="text" id="user-email" class="form-content" name="email" autocomplete="off" required />
-                <div class="form-border"></div>
 
-                <label for="user-password" style="padding-top: 13px;">&nbsp;Password</label>
-                <input type="Password" id="user-password" class="form-content" name="password" autocomplete="off" required />
-                <div class="form-border"></div>
-
-                <a href="#">
-                    <legend id="forgot-pass">Lupa Password !</legend>
-                </a>
-                <input type="submit" id="submit-btn" name="submit" value="LOGIN">
-                <a href="#" id="signup">Belum Punya Akun ?</a>
-            </form>
         </div>
-    </div>
-</body>
 
-</html>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?php echo base_url() ?>assets/sbadmin/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="<?php echo base_url() ?>assets/sbadmin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="<?php echo base_url() ?>assets/sbadmin/js/sb-admin-2.min.js"></script>
+
+</body>
