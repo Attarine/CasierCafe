@@ -54,5 +54,12 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['auth'] = 'Auth';
-$route['auth/add-acount-user'] = 'Auth/addAcountUser';
+$route['auth/add-acount-user']      = 'Auth/addAcountUser';
 $route['auth/process-registration'] = 'Auth/pocessRegistrationUser';
+$route['auth/logout']               = 'Auth/LogOut';
+
+$route['menu/food']                 = 'Menu/listFood';
+$route['menu/drink']                = 'Menu/listDrink';
+$route['menu/hapus/(::num)']        = 'Menu/hapusFood/$1';
+$route['menu/ubah/(::num)']         = 'Menu/ubahFood/$1';
+$route['menu/tambah']               = 'Menu/tambahFood';

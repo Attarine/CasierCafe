@@ -16,19 +16,14 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Login System</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" method="POST" action="">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" name="username" placeholder="Masukkan Username anda">
+                                            <input type="text" class="form-control form-control-user" name="username" placeholder="Masukkan Username anda" autocomplete="off">
+                                            <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" name="password" placeholder="Masukkan Password anda">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
+                                            <input type="password" class="form-control form-control-user" name="password" placeholder="Masukkan Password anda" autocomplete="off">
+                                            <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login

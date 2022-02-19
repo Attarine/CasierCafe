@@ -11,7 +11,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user" method="POST" action="<?= base_url('auth/process-registration'); ?>">
+                            <form class="user" method="POST" action="">
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="user_name" placeholder="Nama Lengkap" autocomplete="off">
                                     <?= form_error('user_name', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -23,6 +23,14 @@
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-user" name="password" id="password" placeholder="Password">
                                     <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
+                                </div>
+                                <div class="form-group">
+                                    <select name="role_id" class="form-control" id="role_id">
+                                        <option value="0" selected>Klik Untuk Membuka Pilihan</option>
+                                        <?php foreach ($user_role as $val) : ?>
+                                            <option value="<?= $val['role_id']; ?>"><?= $val['role']; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Daftar Akun
